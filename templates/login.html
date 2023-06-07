@@ -1,0 +1,22 @@
+{%extends "layout.html"%}
+
+{%block title%}
+    
+<title>Login</title>
+
+{%endblock%}
+
+{%block body%}
+{% from "formhelpers.html" import render_field %}
+
+<h3>Login</h3>
+<hr>
+<form method="post">
+    {{ render_field(form.username) }}
+    {{ render_field(form.password) }}
+
+    <button type="submit" class="btn btn-success">Login</button>
+</form>   
+
+
+{%endblock%}
